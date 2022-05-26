@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="D:\TNTRA Internship\Form-3\css\formStyle.css">
+  <script src="D:\TNTRA Internship\Form-3\olp-validations\jquery.min.js"></script>
+  <script src="D:\TNTRA Internship\Form-3\olp-validations\jquery.validate.min.js"></script>
+  <script type="text/javascript" src="D:\TNTRA Internship\Form-3\olp-validations\formValidation.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form id="f1" name="form1">
+
+      <h1>Customer Details:</h1>
+      <hr>
+      <label for="name"><b>Full Name </b><span class="ast">*</span></label>
+      <div class="division">
+        <div>
+          <input type="text" id="fname" name="firstname" onchange="return fnameValidate();">
+          <label id="firstLabel1" for="fname">First Name <br><span class="error" id="fnameErr"></span></label> <br>
+
+        </div>
+
+        <div>
+          <input type="text" id="lname" name="lastname" onblur="return lnameValidate();">
+          <label id="lastLabel1" for="lname">Last Name <br><span class="error" id="lnameErr"></span></label> <br>
+        </div>
+
+      </div><br>
+
+      <label for="add"><b>Address</b><span class="ast">*</span></label>
+      <input type="text" title="address" name="address1" id="add1" onblur="return add1Validate();">
+      <label>Street Address Line 1<div class="error" id="add1label"></div></label>
+      <br><span class="error" id="add1Err"></span>
+      <input type="text" title="address" name="address2" id="add2" onblur="return add2Validate();">
+      <label>Street Address Line 2<div class="error" id="add2label"></div></label>
+      <br><span class="error" id="add2Err"></span>
+      <div class="division">
+        <div>
+          <input type="text" id="city" name="city" onblur="return cityValidate();">
+          <label id="city">City<div class="error" id="cityErr"></div></label>
+        </div>
+
+        <div>
+          <input type="text" id="state" name="state" onchange="return stateValidate();">
+          <label id="state">State/Provision<div class="error" id="stateErr"></div></label>
+        </div>
+      </div>
+      <input type="text" title="address" name="pincode" id="pin" onblur="return pinValidate();">
+      <label>Postal/Zip code<br><span class="error" id="zipErr"></span></label><br><br>
+
+      <label for="phone"><b>Phone number </b><span class="ast">*</span></label><br>
+      <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" onblur="return phoneValidate();"><br><span
+        class="error" id="phoneErr"></span><br><br>
+
+
+      <label for="email"><b>E-mail</b></label><br>
+      <input class="email-txt" type="email" placeholder="ex:email@yahoo.com" name="email" id="email"
+        onblur="return emailValidate();">
+      <br><span class="error" id="emailErr"></span>
+      <title>example@example.com</title><br><br>
+
+
+      <label for="about"><b>How did you hear about us?</b><span class="ast">*</span></label><br>
+
+      <select name="about" id="about" class="" onblur="return selectValidate()">
+        <option value="">Please select</option>
+        <option value="Magazine">Magazine</option>
+        <option value="Newspaper">Newspaper</option>
+        <option value="Internet">Internet</option>
+        <option value="Other">Other</option>
+      </select><br><span class="error" id="selectErr"></span><br><br>
+
+
+      <label for="feedback"><b>Feedback about us:</b></label><br>
+      <textarea rows="5" cols="98" id="fdb" name="feedback" onblur="return maxLen()"></textarea>
+      <br><span class="error" id="fdbErr"></span><br><br>
+
+      <label for="suggestion"><b>Suggestion for further improvement:</b></label><br>
+      <textarea rows="5" cols="98" id="suggest" name="suggestion" onblur="return maxLen()"></textarea>
+      <br><span class="error" id="suggErr"></span><br>
+
+      <label for="check"><b>Will you be willing to recommand us?</label>
+      <input type="checkbox" id="check" name="check" value="recommand" onblur="return checkboxValidate()">
+      <span class="error" id="checkBoxErr"></span><br><br>
+
+      <p class="radio-container"><label><b>Gender:</b></label>
+        <input type="radio" id="male" name="gender" class="gender" value="male" onblur="return genderValidate()">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" class="gender" value="female" onblur="return genderValidate()">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" class="gender" value="other" onblur="return genderValidate()">
+        <label for="other">Other</label>
+      </p><br><span class="error" id="genErr"></span><br><br>
+
+      <p>Please give reference of any two people whom you feel:</p><br>
+      <table>
+        <tr>
+          <td class="tdx"></td>
+          <th>Full name</th>
+          <th>Address</th>
+          <th>Contact Number</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td input="text"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table><br>
+
+      <button type="submit" class="registerbtn" value="submit" id="submitBtn">Submit</button>
+
+
+    </form><br>
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th nowrap>Sr.No</th>
+          <th nowrap>First Name</th>
+          <th nowrap>Last name</th>
+          <th nowrap>Address</th>
+          <th nowrap>Contact</th>
+          <th nowrap>Email</th>
+          <th nowrap>About</th>
+          <th nowrap>Gender</th>
+          <th nowrap>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table><br>
+
+  </div>
+
+</body>
+
+</html>

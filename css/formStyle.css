@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(222, 220, 231);
+  border-color: black;
+  border: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  border: 1px solid;
+}
+
+/* Add padding to containers */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: white;
+  align-content: center;
+  width: fit-content;
+  margin: auto;
+  border: 1px solid slategray;
+}
+
+.fname {
+  width: 50%;
+  border: none;
+  padding-left: 0%;
+  padding-right: 1%;
+}
+
+.name-table {
+  border: none;
+  width: 50%;
+  text-align: left;
+}
+
+.ast {
+  color: red;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea,
+input[list] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid slategray;
+}
+
+.email-txt {
+  width: 40%;
+}
+
+input[type=tel],
+input[type=email],
+input[list] {
+  width: 40%;
+}
+
+select {
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  border: none;
+  width: 40%;
+  border: 1px solid slategray;
+
+}
+
+input[type=checkbox] {
+  border: none;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+  background-color: white;
+  border: 1px solid slategray
+}
+
+input:hover {
+  border: 2px solid;
+}
+
+select:hover {
+  border: 2px solid;
+}
+
+textarea:hover {
+  border: 2px solid;
+}
+
+input[type=checkbox]:hover {
+  background-color: black;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #a7a3a3;
+  margin-bottom: 25px;
+
+}
+
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #20c974;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 35%;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%
+}
+
+th {
+  border: 0.1px solid slategray;
+  background-color: rgb(212, 212, 221);
+  padding: 15px;
+}
+
+td {
+  border: 0.1px solid slategray;
+  padding: 15px;
+}
+
+.tdx {
+  border: none;
+}
+
+td:hover {
+  border: 2px solid;
+}
+
+.division {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.division>div {
+  padding: 0 5px;
+}
+
+.error {
+  color: red;
+  font-size: small;
+}
+
+.row {
+  padding-bottom: 10px;
+}
